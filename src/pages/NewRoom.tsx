@@ -1,14 +1,26 @@
-// import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '../hooks/useAuth';
+import { FormEvent, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import illustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
 import { Button } from "../components/Button";
-import { Link } from 'react-router-dom';
-import { FormEvent } from 'react';
+import { database } from '../services/firebase';
 
 export function NewRoom() {
-  // const { user } = useAuth();
+  const { user } = useAuth();
+  const history = useHistory();
+  const [newRoom, setNewRoom] = useState('');
   async function handleCreateRoom(event: FormEvent) {
     event.preventDefault();
+    if (newRoom.trim() === '') {
+      return;
+    }
+    const roomRef = database.ref('rooms');
+    const firebaseRom = await roomRef.push({
+      title: newRoom,
+      authorId: user?.id,
+    })
+    history.push(`/rooms/${firebaseRom.key}`)
   }
   return (
     <div className="box-border h-screen flex">
@@ -25,9 +37,13 @@ export function NewRoom() {
             <input
               type="text"
               placeholder="Nome da sala"
+              onChange={event => setNewRoom(event.target.value)}
+              value={newRoom}
               className="bg-white border border-gray-200 w-full h-12 rounded-lg py-0 px-4 focus:outline-none focus:ring-0"
             />
-            <Button type="submit">
+            <Button
+              type="submit"
+              className="w-full bg-purple-500 text-white hover:bg-purple-400 transition-colors duration-200 flex justify-center items-center cursor-pointer h-12 py-0 px-8 mt-4 border-0 rounded-lg font-medium disabled:opacity-50 focus:outline-none">
               Entre na sala
             </Button>
           </form>
