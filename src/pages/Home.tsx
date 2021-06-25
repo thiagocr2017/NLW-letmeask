@@ -11,6 +11,7 @@ export function Home() {
   const history = useHistory();
   const { user, signInWithGoogle } = useAuth();
   const [roomCode, setRoomCode] = useState('');
+  const [msg, setMsg] = useState('');
 
   async function handleCreateRoom() {
     if (!user) {
@@ -26,19 +27,23 @@ export function Home() {
     }
     const roomRef = await database.ref(`rooms/${roomCode}`).get();
     if (!roomRef.exists()) {
-      alert('Room does not exists.');
-      return;
+      // alert('Room does not exists.');
+      return setMsg('Room does not exists.');
+    }
+    if (roomRef.val().endedAt) {
+      // alert('Room already closed.');
+      return setMsg('Room already closed.');
     }
     history.push(`rooms/${roomCode}`);
   }
   return (
-    <div className="box-border h-screen flex">
-      <aside className="bg-gradient-to-tl from-pink-400 via-purple-600 to-purple-700 text-white py-32 px-20 flex flex-col w-7/12 justify-center">
+    <div className="box-border h-screen md:flex block">
+      <aside className="bg-gradient-to-tl from-pink-400 via-purple-600 to-purple-700 text-white py-32 px-20 flex flex-col md:w-7/12 justify-center">
         <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" className="max-w-xs" />
         <strong className="font-bold font-poppins text-3xl mt-4">Crie salas de Q&amp;A ao-vivo</strong>
         <p className="text-2xl mt-4 text-gray-100">Tire as dúvidas da sua audiência em tempo-real</p>
       </aside>
-      <main className="flex w-6/12 py-0 px-8 items-center justify-center">
+      <main className="flex mt-6 md:mt-0 md:w-6/12 py-0 px-8 items-center justify-center">
         <div className="flex flex-col w-full max-w-xs items-stretch text-center">
           <img src={logoImg} alt="Letmeask" className="self-center" />
           <button onClick={handleCreateRoom} className="text-white bg-red-500 hover:bg-red-400 transition-colors duration-200 flex justify-center items-center cursor-pointer border-0 mt-16 h-12 rounded-lg font-medium focus:outline-none">
@@ -58,6 +63,11 @@ export function Home() {
               value={roomCode}
               className="bg-white border border-gray-200 w-full h-12 rounded-lg py-0 px-4 focus:outline-none focus:ring-0"
             />
+            {msg ? (
+              <span className='text-red-400 text-sm font-light'>{msg}</span>
+            ) : (
+              <span></span>
+            )}
             <Button
               type="submit"
               className="w-full bg-purple-500 text-white hover:bg-purple-400 transition-colors duration-200 flex justify-center items-center cursor-pointer h-12 py-0 px-8 mt-4 border-0 rounded-lg font-medium disabled:opacity-50 focus:outline-none">

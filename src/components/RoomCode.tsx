@@ -12,7 +12,7 @@ export function RoomCode(props: RoomCodeProps) {
     strict: false
   });
   const [codeIsCopied, setCodeIsCopied] = useState(false); // Lucas Gabriel, obrigado pela implementacao do codigo para mudar o stado.
-  function copyRoomCodeToClipboard() {
+  function copyRoomLinkToClipboard() {
     console.log(process.env.REACT_APP_BASE_URL);
     const codeMatch = match;
     if (codeMatch != null) {
@@ -24,7 +24,7 @@ export function RoomCode(props: RoomCodeProps) {
   console.log();
   return (
     <button
-      onClick={copyRoomCodeToClipboard}
+      onClick={copyRoomLinkToClipboard}
       className="h-10 rounded-lg overflow-hidden bg-white border border-purple-500 cursor-pointer flex">
       <div className="bg-purple-500 p-3 flex justify-center items-center">
         <img src={copyImg} alt="Copy room code" />

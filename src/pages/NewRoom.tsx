@@ -20,7 +20,7 @@ export function NewRoom() {
       title: newRoom,
       authorId: user?.id,
     })
-    history.push(`/rooms/${firebaseRom.key}`)
+    history.push(`/admin/rooms/${firebaseRom.key}`)
   }
   return (
     <div className="box-border h-screen flex">
