@@ -20,6 +20,15 @@ export function Room() {
   const { questions, title } = useRoom(roomId);
   const history = useHistory();
 
+  async function handleValidateRoom() {
+    const roomRef = await database.ref(`/rooms/${roomId}`).get();
+    if (roomRef.val().endedAt) {
+      history.push(`/`);
+      return;
+    }
+  }
+  handleValidateRoom();
+
   async function handleSendNewQuestion(event: FormEvent) {
     event.preventDefault();
     if (newQuestion.trim() === '') {
@@ -59,23 +68,15 @@ export function Room() {
     history.push(`/rooms/${roomId}`);
   }
 
-  async function handleValidateRoom() {
-    const roomRef = await database.ref(`/rooms/${roomId}`).get();
-    if (roomRef.val().endedAt) {
-      history.push(`/`);
-      return;
-    }
-  }
-  handleValidateRoom();
   return (
     <div>
-      <header className=" p-6 border-b border-gray-200 bg-white">
+      <header className="p-6 border-b border-gray-200 bg-white">
         <div className=" max-w-6xl my-0 mx-auto flex justify-between items-center">
           <img src={logoImg} alt="Letmeask" className=" max-h-11" />
           <RoomCode code={roomId} />
         </div>
       </header>
-      <main className=" max-w-3xl my-0 mx-auto">
+      <main className="max-w-3xl my-0 mx-4 md:mx-auto">
         <div className=" mt-8 mb-6 mx-0 flex items-center">
           <h1 className="text-gray-800 font-semibold font-poppins text-2xl">
             Sala {title}

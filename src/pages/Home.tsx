@@ -37,8 +37,8 @@ export function Home() {
     history.push(`rooms/${roomCode}`);
   }
   return (
-    <div className="box-border h-screen md:flex block">
-      <aside className="bg-gradient-to-tl from-pink-400 via-purple-600 to-purple-700 text-white py-32 px-20 flex flex-col md:w-7/12 justify-center">
+    <div className="box-border h-1/3 md:h-screen md:flex block">
+      <aside className="bg-gradient-to-tl from-pink-400 via-purple-600 to-purple-700 text-white py-8 md:py-32 px-20 flex flex-col md:w-7/12 justify-center">
         <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" className="max-w-xs" />
         <strong className="font-bold font-poppins text-3xl mt-4">Crie salas de Q&amp;A ao-vivo</strong>
         <p className="text-2xl mt-4 text-gray-100">Tire as dúvidas da sua audiência em tempo-real</p>

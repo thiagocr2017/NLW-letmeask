@@ -55,7 +55,7 @@ export function AdminRoom() {
           </div>
         </div>
       </header>
-      <main className=" max-w-3xl my-0 mx-auto relative">
+      <main className=" max-w-3xl my-0 mx-4 md:mx-auto relative">
         <div className=" mt-8 mb-6 mx-0 flex items-center">
           <h1 className="text-gray-800 font-semibold font-poppins text-2xl">
             Sala {title}
