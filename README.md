@@ -30,7 +30,7 @@
   <summary>Indice</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Letmeask</a>
+      <a href="#letmeask">Letmeask</a>
       <ul>
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#sala-admin">Sala Admin</a></li>
@@ -45,6 +45,72 @@
   </ol>
 </details>
 
+<!-- Letmeask -->
+# Letmeask
+
+Uma ferramenta criada para solucionar entre os comunicadores e sua audiencia a forma em que eles interactuam nas lives de redes sociales o en cursos a distancia, podendo organizar o fluxo de informação das perguntas e respostas em tempo real.
+
+### Inicio
+
+<ul>
+ <img src="./gitimages/inicio.png" alt="Logo" width="900" height="400">
+ <img src="./gitimages/salaclosed.png" alt="Logo" width="450" height="300">
+ <img src="./gitimages/salanot.png" alt="Logo" width="450" height="300">
+</ul>
+
+### Sala Admin
+
+<ul>
+  <img src="./gitimages/saladmin.png" alt="Logo" width="900" height="400">
+</ul>
+
+### Sala Cliente
+
+<ul>
+  <img src="./gitimages/sala.png" alt="Logo" width="900" height="400">
+</ul>
+
+### Mobile
+
+<ul>
+  <img src="./gitimages/minicio.png" alt="Logo" width="400" height="900">
+  <img src="./gitimages/msalanova.png" alt="Logo" width="400" height="900">
+  <img src="./gitimages/msaladmin.png" alt="Logo" width="400" height="900">
+  <img src="./gitimages/msala.png" alt="Logo" width="400" height="900">
+</ul>
+
+### Built With
+
+Ferramentas que ajudaram no desenvolvimento:
+* [React](https://reactjs.org)
+* [Tailwind CSS](http://tailwindcss.com)
+* [Firebase](https://firebase.google.com)
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+## Contact
+
+Your Name - [Whatsapp](https://twitter.com/your_username) - email@example.com
+
+Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Img Shields](https://shields.io)
+* [Choose an Open Source License](https://choosealicense.com)
+* [GitHub Pages](https://pages.github.com)
+* [Animate.css](https://daneden.github.io/animate.css)
+* [Loaders.css](https://connoratherton.com/loaders)
+* [Slick Carousel](https://kenwheeler.github.io/slick)
+* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
+* [Sticky Kit](http://leafo.net/sticky-kit)
+* [JVectorMap](http://jvectormap.com)
+* [Font Awesome](https://fontawesome.com)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
