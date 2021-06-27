@@ -94,9 +94,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [Whatsapp](https://twitter.com/your_username) - email@example.com
+Thiago Lopez Alfaro - [Whatsapp](https://api.whatsapp.com/send?phone=+5575992151972&text=vi%20seu%20perfil%20em%20github%20gostaria%20de%20falar%20sobre) - lopezalfaro@icloud.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/thiagocr2017/NLW-letmeask](https://github.com/thiagocr2017/NLW-letmeask)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
