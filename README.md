@@ -48,7 +48,7 @@
 <!-- Letmeask -->
 # Letmeask
 
-Uma ferramenta criada para solucionar entre os comunicadores e sua audiencia a forma em que eles interactuam nas lives de redes sociales o en cursos a distancia, podendo organizar o fluxo de informação das perguntas e respostas em tempo real.
+Uma ferramenta criada para solucionar entre os comunicadores e sua audiencia, a forma em que eles interactuam nas lives de redes sociales o en cursos a distancia, podendo organizar o fluxo de informação das perguntas e respostas em tempo real.
 
 ### Inicio
 
